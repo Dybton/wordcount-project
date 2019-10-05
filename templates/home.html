@@ -1,0 +1,11 @@
+<h1> Word Count <h1>
+{{ yo }}
+<!-- By writing two brackets, I can use python code -->
+
+<form action="{%url 'count'%}">  <!-- appearantly I can just write count here .., but this method is better - using % lets us type url info % -->
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br/>
+    <input type="submit" value="Count!" />
+</form>
+
+<a href="{%url 'about'%}"> About </a>

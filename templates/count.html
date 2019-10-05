@@ -1,0 +1,16 @@
+<h1> There are {{ count }} words in yout text </h1>
+
+<a href="{%url 'home'%}"> Start Again </a>
+
+<h2> Your Text: </h2>
+{{ fulltext }}
+<!-- here we access the dictionary we passed from views -->
+
+<h1> Word Count: </h1>
+{% for word, counttotal in sortedwords %}
+<!-- for word, countotal means that its for both of these in worddictionary -->
+
+{{ word }} - {{ counttotal }}
+<br />
+
+{% endfor %}
